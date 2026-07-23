@@ -335,11 +335,17 @@ class GaussianHSMM(BaseEstimator):
         uniform_off_diagonal = (np.ones_like(output) - np.eye(self.n_components)) / (
             self.n_components - 1
         )
-        return np.divide(
-            output,
-            row_sums,
-            out=uniform_off_diagonal,
-            where=row_sums > 0,
+        # NumPy's return annotation differs across supported NumPy releases.
+        # Converting explicitly keeps our public return type stable and avoids
+        # an `Any` leaking from older NumPy stubs during Python 3.10/3.11 CI.
+        return np.asarray(
+            np.divide(
+                output,
+                row_sums,
+                out=uniform_off_diagonal,
+                where=row_sums > 0,
+            ),
+            dtype=np.float64,
         )
 
     def _snapshot(self) -> dict[str, FloatArray]:

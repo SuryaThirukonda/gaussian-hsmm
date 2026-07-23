@@ -11,7 +11,7 @@ Thank you for considering a contribution to `gaussian-hsmm`.
 ## Development setup
 
 ```bash
-git clone https://github.com/raghavken/gaussian-hsmm.git
+git clone https://github.com/SuryaThirukonda/gaussian-hsmm.git
 cd gaussian-hsmm
 python -m venv .venv
 python -m pip install --upgrade pip

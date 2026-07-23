@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   test:
+    name: Test Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -17,10 +18,24 @@ jobs:
         python-version: ["3.10", "3.11", "3.12", "3.13"]
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install package and test dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[test]"
+      - name: Tests and coverage
+        run: pytest --cov=gaussian_hsmm
+
+  quality:
+    name: Quality checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
           cache: pip
       - name: Install package and development dependencies
         run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
@@ -30,16 +45,17 @@ jobs:
         run: ruff format --check .
       - name: Type check
         run: mypy src/gaussian_hsmm
+      - name: Validate project metadata
+        run: validate-pyproject pyproject.toml
       - name: Check source-distribution manifest
         run: check-manifest
-      - name: Tests and coverage
-        run: pytest --cov=gaussian_hsmm
 
   build:
+    name: Build distributions
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -50,9 +66,11 @@ jobs:
       - name: Validate distribution metadata and README
         run: python -m twine check dist/*
       - name: Upload distributions as CI artifacts only
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: distributions
           path: dist/
+          if-no-files-found: error
+          retention-days: 14
 
 # This workflow deliberately has no PyPI permissions and no publish job.

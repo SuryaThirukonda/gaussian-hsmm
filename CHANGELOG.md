@@ -6,15 +6,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
-### Added
-
-- Comprehensive package documentation and runnable examples.
-- Typed-package marker and static-analysis configuration.
-- Cross-version CI for tests, linting, typing, and distribution validation.
-- Contribution, security, release, citation, and conduct documentation.
-- Validation and serialization-oriented tests.
-
-## [0.1.0] - Unreleased
+## [0.1.0] - 2026-07-23
 
 ### Added
 
@@ -25,6 +17,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - HMM-based parameter initialization.
 - Multiple-sequence support.
 - AIC, BIC, and convergence diagnostics.
+- Comprehensive package documentation and runnable examples.
+- Typed-package marker and static-analysis configuration.
+- Cross-version CI for tests, linting, typing, and distribution validation.
+- Contribution, security, release, citation, and conduct documentation.
+- Validation and serialization-oriented tests.
 
-[Unreleased]: https://github.com/raghavken/gaussian-hsmm/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/raghavken/gaussian-hsmm/releases/tag/v0.1.0
+[Unreleased]: https://github.com/SuryaThirukonda/gaussian-hsmm/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/SuryaThirukonda/gaussian-hsmm/releases/tag/v0.1.0

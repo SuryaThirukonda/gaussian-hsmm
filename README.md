@@ -2,8 +2,8 @@
 
 [![CI](https://github.com/SuryaThirukonda/gaussian-hsmm/actions/workflows/ci.yml/badge.svg)](https://github.com/SuryaThirukonda/gaussian-hsmm/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Typed](https://img.shields.io/badge/typing-py.typed-blue.svg)](src/gaussian_hsmm/py.typed)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/LICENSE)
+[![Typed](https://img.shields.io/badge/typing-py.typed-blue.svg)](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/src/gaussian_hsmm/py.typed)
 
 `gaussian-hsmm` is a scikit-learn-style implementation of a multivariate Gaussian hidden semi-Markov model (HSMM) with explicit state-duration distributions.
 
@@ -255,12 +255,12 @@ The explicit-duration recursions scale approximately with `T`, `K`, and `D`, wit
 
 ## Examples and design documentation
 
-- [`examples/basic_usage.py`](examples/basic_usage.py)
-- [`examples/multiple_sequences.py`](examples/multiple_sequences.py)
-- [`docs/algorithm.md`](docs/algorithm.md)
-- [`docs/api.md`](docs/api.md)
-- [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- [`RELEASING.md`](RELEASING.md)
+- [`examples/basic_usage.py`](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/examples/basic_usage.py)
+- [`examples/multiple_sequences.py`](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/examples/multiple_sequences.py)
+- [`docs/algorithm.md`](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/docs/algorithm.md)
+- [`docs/api.md`](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/docs/api.md)
+- [`CONTRIBUTING.md`](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/CONTRIBUTING.md)
+- [`RELEASING.md`](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/RELEASING.md)
 
 ## Development
 
@@ -278,12 +278,12 @@ The GitHub Actions workflow runs tests across supported Python versions and vali
 
 ## Contributing and security
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development workflow and [SECURITY.md](SECURITY.md) for responsible vulnerability reporting. All participation is covered by the [Code of Conduct](CODE_OF_CONDUCT.md).
+See [CONTRIBUTING.md](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/CONTRIBUTING.md) for development workflow and [SECURITY.md](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/SECURITY.md) for responsible vulnerability reporting. All participation is covered by the [Code of Conduct](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/CODE_OF_CONDUCT.md).
 
 ## Citation
 
-If this package contributes to academic work, cite the software metadata in [`CITATION.cff`](CITATION.cff) and archive a specific release so your analysis can identify an immutable version.
+If this package contributes to academic work, cite the software metadata in [`CITATION.cff`](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/CITATION.cff) and archive a specific release so your analysis can identify an immutable version.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](https://github.com/SuryaThirukonda/gaussian-hsmm/blob/main/LICENSE).
