@@ -50,7 +50,7 @@ jobs:
       - name: Validate distribution metadata and README
         run: python -m twine check dist/*
       - name: Upload distributions as CI artifacts only
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: distributions
           path: dist/
