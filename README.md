@@ -99,11 +99,13 @@ import numpy as np
 from gaussian_hsmm import GaussianHSMM
 
 rng = np.random.default_rng(42)
-X_train = np.vstack([
-    rng.normal([-2.0, 0.0], [0.4, 0.3], size=(80, 2)),
-    rng.normal([2.0, 1.5], [0.5, 0.4], size=(100, 2)),
-    rng.normal([-2.0, 0.0], [0.4, 0.3], size=(70, 2)),
-])
+X_train = np.vstack(
+    [
+        rng.normal([-2.0, 0.0], [0.4, 0.3], size=(80, 2)),
+        rng.normal([2.0, 1.5], [0.5, 0.4], size=(100, 2)),
+        rng.normal([-2.0, 0.0], [0.4, 0.3], size=(70, 2)),
+    ]
+)
 
 model = GaussianHSMM(
     n_components=2,
@@ -158,16 +160,16 @@ for covariance_type in ("diag", "full"):
             random_state=42,
         ).fit(X_train)
 
-        rows.append({
-            "n_states": n_states,
-            "covariance_type": covariance_type,
-            "train_log_likelihood": candidate.score(X_train),
-            "test_log_likelihood_per_observation": (
-                candidate.score(X_test) / len(X_test)
-            ),
-            "aic": candidate.aic(X_train),
-            "bic": candidate.bic(X_train),
-        })
+        rows.append(
+            {
+                "n_states": n_states,
+                "covariance_type": covariance_type,
+                "train_log_likelihood": candidate.score(X_train),
+                "test_log_likelihood_per_observation": (candidate.score(X_test) / len(X_test)),
+                "aic": candidate.aic(X_train),
+                "bic": candidate.bic(X_train),
+            }
+        )
 ```
 
 - Larger log-likelihood means the observations are more plausible under the model.

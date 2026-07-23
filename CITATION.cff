@@ -4,7 +4,6 @@ title: "gaussian-hsmm: Explicit-duration Gaussian hidden semi-Markov models in P
 type: software
 authors:
   - family-names: "Suryathirukonda"
-    given-names: "Raghavken"
 version: 0.1.0
 license: MIT
 repository-code: "https://github.com/SuryaThirukonda/gaussian-hsmm"
