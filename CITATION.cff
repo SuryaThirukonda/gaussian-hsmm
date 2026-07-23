@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived version used in your analysis."
+title: "gaussian-hsmm: Explicit-duration Gaussian hidden semi-Markov models in Python"
+type: software
+authors:
+  - family-names: "Suryathirukonda"
+    given-names: "Raghavken"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/SuryaThirukonda/gaussian-hsmm"
+keywords:
+  - hidden semi-Markov model
+  - HSMM
+  - time series
+  - regime detection
+  - machine learning
